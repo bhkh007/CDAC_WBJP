@@ -1,30 +1,25 @@
 package com.studentcrud.models;
 
 public class Student {
-
 	private int id;
 	private String name;
-	private float marks;
-	private String gender;
-	private String city;
 	private String phone;
-	
+	private String gender;
+	private float marks;
+	private String city;
 	
 	public Student() {
-		
 	}
 	
-	public Student(int id, String name, float marks, String gender, String city, String phone) {
+	public Student(int id, String name, String phone, String gender, float marks, String city) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.marks = marks;
-		this.gender = gender;
-		this.city = city;
 		this.phone = phone;
+		this.gender = gender;
+		this.marks = marks;
+		this.city = city;
 	}
-	
-	
 	public int getId() {
 		return id;
 	}
@@ -37,11 +32,11 @@ public class Student {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public float getMarks() {
-		return marks;
+	public String getPhone() {
+		return phone;
 	}
-	public void setMarks(float marks) {
-		this.marks = marks;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 	public String getGender() {
 		return gender;
@@ -49,21 +44,18 @@ public class Student {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
+	public float getMarks() {
+		return marks;
+	}
+	public void setMarks(float marks) {
+		this.marks = marks;
+	}
 	public String getCity() {
 		return city;
 	}
 	public void setCity(String city) {
 		this.city = city;
 	}
-	public String getPhone() {
-		return phone;
-	}
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-	
-	
-	
 	
 	
 }

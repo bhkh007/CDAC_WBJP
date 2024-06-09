@@ -5,25 +5,25 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-<form>
-<input type ="text" placeholder="Enter id" name = "id">
-<input type ="text" placeholder="Enter name" name = "name">
-<input type ="text" placeholder="Enter phone" name = "phone">
-<input type ="text" placeholder="Enter marks" name = "marks">
-
-<br>
-<select name ="city">
-<option>Mumbai</option>
-<option>Pune</option>
-<option>Amravati</option>
-</select>
-<input type="radio" value="male" name="gender">Male
-<input type="radio" value="female" name="gender">Female
-<br><br>
-<input type="submit" value="Register student">
-
-
+<a href="StudentController">Fetch All Students</a>
+<form action="StudentController" method="post">
+	<input type="text" placeholder="Enter Id" name="id">
+	<br><br>
+	<input type="text" placeholder="Enter Name" name="name">
+	<br><br>
+	<input type="text" placeholder="Enter Phone" name="phone">
+	<br><br>
+	<input type="text" placeholder="Enter Marks" name="marks">
+	<br><br>
+	<select name="city">
+		<option>Mumbai</option>
+		<option>Pune</option>
+		<option>Nagpur</option>
+	</select>
+	<br><br>
+	<input type="radio" value="male" name="gender"> Male <input type="radio" value="female" name="gender"> Female
+	<br><br>
+	<input type="submit" value="Register Student">  
 </form>
 </body>
 </html>
