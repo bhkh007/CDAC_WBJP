@@ -14,13 +14,14 @@ public class AdditionServlet extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		
+		response.setContentType("Application/json");
 		int a = Integer.parseInt(request.getParameter("n1"));
 		int b = Integer.parseInt(request.getParameter("n2"));
 		int c = a+b;
 		System.out.println("Sum is : "+c);
 	
 		 PrintWriter pwr=response.getWriter(); 
-		 pwr.println("Sum is : " + c);
+		 pwr.println("<h1>Sum is : " + c+"</h1>");
 		 
 	}
 
