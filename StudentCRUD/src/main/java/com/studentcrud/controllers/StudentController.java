@@ -47,11 +47,12 @@ public class StudentController extends HttpServlet {
 				Student student = studentIterator.next();
 				printWriter.println("<tr>");
 				printWriter.println("<td>"+student.getId()+"</td>");
-				printWriter.println("<td>"+student.getName()+"</td>");
+				
 				printWriter.println("<td>"+student.getPhone()+"</td>");
 				printWriter.println("<td>"+student.getMarks()+"</td>");
 				printWriter.println("<td>"+student.getCity()+"</td>");
 				printWriter.println("<td>"+student.getGender()+"</td>");
+				printWriter.println("<td>"+student.getName()+"</td>");
 				printWriter.println("<td><a href='DeleteStudentController?id="+student.getId()+"'>Delete</a></td>");
 				printWriter.println("<tr>");
 			}
@@ -78,7 +79,7 @@ public class StudentController extends HttpServlet {
 			student.setCity(request.getParameter("city"));
 			student.setGender(request.getParameter("gender"));
 			student.setMarks(Float.parseFloat(request.getParameter("marks")));
-			
+			System.out.println("Welcome to Data Page");
 			int result = studentDAOImpl.save(student);
 			if(result>0) {
 				printWriter.println("<h3>Student Registered</h3>");

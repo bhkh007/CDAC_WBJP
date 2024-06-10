@@ -15,7 +15,7 @@ public class StudentDAOImpl implements StudentDAO {
 		int result = -1;
 		try {
 			SqlUtil.connectDb();
-			String qry = "INSERT INTO student VALUES('"+student.getId()+"','"+student.getName()+"','"+student.getPhone()+"','"+student.getMarks()+"','"+student.getCity()+"','"+student.getGender()+"')";
+			String qry = "INSERT INTO student VALUES('"+student.getId()+"','"+student.getPhone()+"','"+student.getMarks()+"','"+student.getCity()+"','"+student.getGender()+"','"+student.getName()+"')";
 			result = SqlUtil.insert(qry);
 			SqlUtil.close();
 		} catch (Exception e) {
@@ -89,6 +89,13 @@ public class StudentDAOImpl implements StudentDAO {
 			System.out.println();
 		}
 		return result;
+	}
+
+	@Override
+	public int update(int id) {
+		
+		
+		return 0;
 	}
 
 }
