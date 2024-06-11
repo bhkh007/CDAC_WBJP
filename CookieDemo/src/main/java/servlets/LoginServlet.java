@@ -1,5 +1,6 @@
 package servlets;
 
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.Cookie;
@@ -25,7 +26,7 @@ public class LoginServlet extends HttpServlet {
 			String username = request.getParameter("username");
 			String password = request.getParameter("password");
 			if(username.equals("admin") && password.equals("admin123")) {
-				Cookie ck = new Cookie("usernameCookie", username);
+				Cookie ck = new Cookie("usernameCookie",username);
 				ck.setMaxAge(5);
 				response.addCookie(ck);
 			}
