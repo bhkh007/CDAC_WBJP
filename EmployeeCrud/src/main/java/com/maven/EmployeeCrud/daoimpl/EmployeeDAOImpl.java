@@ -18,6 +18,12 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	private Session session;
 	private Configuration cfg;
 	
+	public EmployeeDAOImpl() {
+
+		cfg = new Configuration();
+		cfg.configure().addAnnotatedClass(Employee.class);
+		sf = cfg.buildSessionFactory();
+	}
 	
 	@Override
 	public int save(Employee employee) {
@@ -117,7 +123,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 			session.close();
 			
 		}
-		return id;
+		return result;
 	}
 
 	@Override
@@ -150,7 +156,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 			session.close();
 			
 		}
-		return id;
+		return result;
 	}
 
 }
