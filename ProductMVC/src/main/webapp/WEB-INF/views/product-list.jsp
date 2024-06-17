@@ -21,7 +21,7 @@
 		
 		%>
 		
-		<p> Id: <%= p.getId() %>,Name : <%= p.getName() %>, Price: <%= p.getPrice() %>,Quantity : <%= p.getQuantity(), <a href="remove-product/<%=p.getId()%>">Delete</a> </p>
+		<p> Id: <%= p.getId() %>,Name : <%= p.getName() %>, Price: <%= p.getPrice() %>,Quantity : <%= p.getQuantity() %>, <a href="remove-product/<%=p.getId()%>">Delete</a> </p>
 		<%
 	}
 %>
