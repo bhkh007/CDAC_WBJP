@@ -25,5 +25,28 @@
 	<br><br>
 	<input type="submit" value="Register Student">  
 </form>
+
+
+<a href="UpdateController">Update Student</a>
+<form action="UpdateController" method="post">
+	<input type="text" placeholder="Enter Id" name="id" required>
+	<br><br>
+	<input type="text" placeholder="Enter Name" name="name" required>
+	<br><br>
+	<input type="text" placeholder="Enter Phone" name="phone" required>
+	<br><br>
+	<input type="text" placeholder="Enter Marks" name="marks" required>
+	<br><br>
+	<select name="city" required>
+		<option>Mumbai</option>
+		<option>Pune</option>
+		<option>Nagpur</option>
+	</select>
+	<br><br>
+	<input type="radio" value="male" name="gender" required>Male 
+	<input type="radio" value="female" name="gender" required>Female
+	<br><br>
+	<input type="submit" value="Update Student">  
+</form>
 </body>
 </html>

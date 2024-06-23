@@ -12,9 +12,7 @@ import java.util.List;
 import com.studentcrud.daoimpl.StudentDAOImpl;
 import com.studentcrud.models.Student;
 
-/**
- * Servlet implementation class StudentController
- */
+
 public class StudentController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
@@ -47,13 +45,13 @@ public class StudentController extends HttpServlet {
 				Student student = studentIterator.next();
 				printWriter.println("<tr>");
 				printWriter.println("<td>"+student.getId()+"</td>");
-				
+				printWriter.println("<td>"+student.getName()+"</td>");
 				printWriter.println("<td>"+student.getPhone()+"</td>");
 				printWriter.println("<td>"+student.getMarks()+"</td>");
 				printWriter.println("<td>"+student.getCity()+"</td>");
 				printWriter.println("<td>"+student.getGender()+"</td>");
-				printWriter.println("<td>"+student.getName()+"</td>");
 				printWriter.println("<td><a href='DeleteStudentController?id="+student.getId()+"'>Delete</a></td>");
+				printWriter.println("<td><a href='UpdateController?id="+student.getId()+"'>Update</a></td>");
 				printWriter.println("<tr>");
 			}
 			
