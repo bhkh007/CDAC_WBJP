@@ -38,6 +38,7 @@ public class StudentController extends HttpServlet {
 			printWriter.println("<th>City</th>");
 			printWriter.println("<th>Gender</th>");
 			printWriter.println("<th>Actions</th>");
+			printWriter.println("<th>Actions</th>");
 			printWriter.println("</tr>");
 			
 			Iterator<Student> studentIterator = studentsList.iterator();
