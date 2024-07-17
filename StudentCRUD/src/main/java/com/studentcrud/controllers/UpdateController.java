@@ -44,7 +44,7 @@ public class UpdateController extends HttpServlet {
 				student.setGender(request.getParameter("gender"));
 				student.setMarks(Float.parseFloat(request.getParameter("marks")));
 
-				int result = studentDAOImpl.update(student);
+				int result = studentDAOImpl.update(id, student);
 				if (result > 0) {
 					printWriter.println("<h3>Student updated successfully</h3>");
 				} else {
